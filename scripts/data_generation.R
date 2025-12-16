@@ -38,7 +38,7 @@ data_dir <- paste0(getwd(),"/data/")
 
 station_ids <- unique(stationen_aktuell$id)
 
-for (i in 571:length(station_ids)){
+for (i in 1:length(station_ids)){
   file_to_download <- zip_files[str_detect(zip_files, paste0("_", station_ids[i], "_"))]
   file_to_download
   

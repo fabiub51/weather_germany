@@ -21,7 +21,7 @@ The results of this analysis are visualized in the following interactive Tableau
 ---
 
 ### Project Structure
-.
+```
 ├── data/
 │   ├── export.csv              # Final statistical results (trend test outputs)
 │   ├── export.xlsx             # Final statistical results (Excel format)
@@ -32,7 +32,7 @@ The results of this analysis are visualized in the following interactive Tableau
 │   └── statistical_analysis.R  # R script: Performs statistical analysis (imputation, heat wave calculation, Mann-Kendall test)
 ├── stationen.txt               # DWD metadata: List of all climate stations (ID, coordinates, period)
 └── README.md                   # This overview and project documentation
-
+```
 ### Project Files
 
 The project consists of the following key files:

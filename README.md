@@ -73,7 +73,8 @@ The `statistical_analysis.R` script performs all calculations and trend testing.
 2.  **Processing Steps:** For each station file in the `data/` directory, the script performs the following:
     * **Data Import & Filtering:** Imports the data and checks if the station has sufficiently long records (starting within 5 years after the reference start, **1961**).
     * **Imputation:** Missing maximum temperature (`TXK = -999`) values are imputed using the mean of the same calendar day's reading over the last three preceding years.
-    * **Heat Day Definition:** A **heat day** is defined as a day where the maximum temperature (`TXK`) is **greater than $28^\circ \text{C}$** AND **above the 98th percentile** of the historical temperature distribution for that specific day of the year (calculated within a $\pm 15$ day rolling window from the **1961-1990 reference period**).
+    * **Heat Day Definition:** A **heat day** is defined as a day where the maximum temperature (`TXK`) is **greater than $28^\circ \text{C}$** AND **above the 98th percentile** of the historical temperature distribution for that specific day of the year (calculated within a $\pm 15$ day rolling window from the **1961-1990 reference period**). 
+    > **[Heat Wave Definition by DWD](https://www.dwd.de/DE/service/lexikon/Functions/glossar.html?lv3=624852&lv2=101094)**
     * **Heat Wave Definition:** A **heat wave** is defined as a period of **3 or more consecutive heat days**.
     * **Trend Analysis:** The non-parametric **Mann-Kendall test** is applied to the time series of yearly:
         * Total number of heat days (`sum_heat_days`)
@@ -84,7 +85,7 @@ The `statistical_analysis.R` script performs all calculations and trend testing.
     * `data/export.csv`
     * `data/export.xlsx`
 
-### 🔍 Key Libraries and Functions Used
+### Key Libraries and Functions Used
 
 * **`zyp::MannKendall(x)`:** Calculates the Mann-Kendall non-parametric trend test for the time series $x$, returning the $\tau$ statistic and the $p$-value (`sl`). 
 * **`stats::p.adjust(p, method = "BH")`:** Adjusts a vector of $p$-values using the Benjamini-Hochberg method.

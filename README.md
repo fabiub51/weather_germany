@@ -21,17 +21,17 @@ The results of this analysis are visualized in the following interactive Tableau
 ---
 
 ### Project Structure
-
-├── data/                               # Directory for processed and final data outputs
-│   ├── export.csv                      # Final statistical results (trend test outputs)
-│   ├── export.xlsx                     # Final statistical results (Excel format)
-|   └── produkt_*.txt                   # Data for individual weather stations 
-├── zip/                                # Temporary directory for raw downloaded ZIP files
-├── scripts/                            # Directory for R scripts handling download and data processing
-│   ├── data_generation.R               # R script: Handles data download from DWD and extraction
-│   └── statistical_analysis.R          # R script: Performs statistical analysis (imputation, heat wave calculation, Mann-Kendall test)
-├── stationen.txt                       # DWD metadata: List of all climate stations (ID, coordinates, period)
-└── README.md                           # This overview and project documentation
+.
+├── data/
+│   ├── export.csv              # Final statistical results (trend test outputs)
+│   ├── export.xlsx             # Final statistical results (Excel format)
+│   └── produkt_*.txt           # Raw daily climate data for individual weather stations
+├── zip/
+├── scripts/
+│   ├── data_generation.R       # R script: Handles data download from DWD and extraction
+│   └── statistical_analysis.R  # R script: Performs statistical analysis (imputation, heat wave calculation, Mann-Kendall test)
+├── stationen.txt               # DWD metadata: List of all climate stations (ID, coordinates, period)
+└── README.md                   # This overview and project documentation
 
 ### Project Files
 
